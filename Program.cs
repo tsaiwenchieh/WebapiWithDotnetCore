@@ -20,7 +20,7 @@ namespace WebapiWithDotnetCore
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
             .ConfigureAppConfiguration((o, c)=>{
-                
+                o.Configuration.GetConnectionString("");
             })
             .UseStartup<Startup>();
     }
